@@ -10,12 +10,6 @@ export default function Login() {
   const { isLoading, error, data } = useVisitorData({ extendedResult: true }, { immediate: true });
 
   return (
-    <FpjsProvider
-      loadOptions={{
-        apiKey: import.meta.env.VITE_FPJS_API_KEY,
-        region: 'eu',
-      }}
-    >
       <main className="bg-cream h-screen flex-1 flex flex-col items-center justify-center p-6">
         <div id="login-form-container" className="w-full max-w-sm">
           <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-fancy-brown transform rotate-1 hover:rotate-0 transition-all duration-300">
@@ -104,6 +98,5 @@ export default function Login() {
           </div>
         </div>
       </main>
-    </FpjsProvider>
   );
 }

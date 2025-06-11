@@ -1,4 +1,4 @@
-import fingerprintjs from '@fingerprintjs/fingerprintjs-pro-react';
+import * as fingerprintjs from '@fingerprintjs/fingerprintjs-pro-react';
 
 import type { Route } from '../+types/root';
 

@@ -39,7 +39,7 @@ export default function App() {
   return (
     <FpjsProvider
       loadOptions={{
-        apiKey: 'PQMqPGZMelN7B8gDGRw7',
+        apiKey: import.meta.env.VITE_FPJS_API_KEY,
         region: 'eu',
       }}
     >

@@ -1,5 +1,9 @@
-import { FpjsProvider, useVisitorData } from '@fingerprintjs/fingerprintjs-pro-react';
+import fingerprintjs from '@fingerprintjs/fingerprintjs-pro-react';
+
 import type { Route } from '../+types/root';
+
+const { FpjsProvider, useVisitorData } = fingerprintjs;
+
 
 export async function action({}: Route.ActionArgs) {
   // This action is not used in this component, but it can be used for server-side logic if needed.

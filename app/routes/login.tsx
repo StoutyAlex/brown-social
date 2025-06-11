@@ -1,5 +1,7 @@
-import { FpjsProvider, useVisitorData } from '@fingerprintjs/fingerprintjs-pro-react';
 import type { Route } from '../+types/root';
+
+import pkg from '@fingerprintjs/fingerprintjs-pro-react';
+const { FpjsProvider, useVisitorData } = pkg;
 
 export async function action({}: Route.ActionArgs) {
   // This action is not used in this component, but it can be used for server-side logic if needed.
@@ -12,7 +14,7 @@ export default function Login() {
   return (
     <FpjsProvider
       loadOptions={{
-        apiKey: 'PQMqPGZMelN7B8gDGRw7',
+        apiKey: import.meta.env.VITE_FPJS_API_KEY,
         region: 'eu',
       }}
     >
